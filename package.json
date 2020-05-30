@@ -1,11 +1,21 @@
 {
   "name": "extra-version",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A version is a set of numbers that identify a unique evolution of a system.",
   "main": "index.js",
+  "module": "index.mjs",
+  "exports": {
+    "require": "./index.js",
+    "import": "./index.mjs"
+  },
   "scripts": {
+    "einit": "ebuild init",
+    "ecode": "ebuild update --docs false",
+    "eupdate": "ebuild update",
+    "escatter": "ebuild scatter",
     "test": "exit"
   },
+  "runkitExampleFilename": "example.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nodef/extra-version.git"
