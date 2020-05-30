@@ -21,7 +21,7 @@
  * MUST NOT be modified. Any modifications MUST be released as a new version.
  * @see https://semver.org
  */
-interface IVersion {
+export interface IVersion {
   /**
    * Major version X (X.y.z | X > 0) MUST be incremented if any backwards
    * incompatible changes are introduced to the public API. It MAY also

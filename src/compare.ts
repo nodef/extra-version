@@ -1,3 +1,5 @@
+import type {IVersion} from './_types';
+
 /**
  * Compares two versions.
  * @param x a version
