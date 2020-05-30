@@ -1,6 +1,6 @@
 {
   "name": "extra-version",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A version is a set of numbers that identify a unique evolution of a system.",
   "main": "index.js",
   "module": "index.mjs",
