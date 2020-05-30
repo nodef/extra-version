@@ -1,0 +1,24 @@
+WHAT IS THE DATATYPE
+1. string?
+easy to specify
+2. object?
+easy to compare?
+
+- Version?
+
+- from(str): semver.clean()
+Converts string to version
+1. 'major.minor.patch-prerelease+buildmetadata'
+2. {major, minor, patch, prerelease, buildmetadata}
+
+
+- is(v): semver.valid()
+Checks if value is version
+true false
+
+- toString() / stringify() / string()
+
+- compare(x, y)
+-1 0 1
+
+- add(x, y)
