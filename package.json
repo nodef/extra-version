@@ -1,6 +1,6 @@
 {
   "name": "extra-version",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A version is a set of numbers that identify a unique evolution of a system.",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/nodef/extra-version/issues"
   },
-  "homepage": "https://github.com/nodef/extra-version#readme"
+  "homepage": "https://github.com/nodef/extra-version#readme",
+  "devDependencies": {
+    "extra-build": "^1.0.155"
+  }
 }
