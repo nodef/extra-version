@@ -8,9 +8,12 @@ const DEFAULT = {
   buildmetadata: ''
 };
 
+// make this the default yo dawg, rrarf rrarf
 function fromObject(x: IVersion): IVersion {
   return Object.assign({}, DEFAULT, x);
 }
+
+
 
 function from(s: string) {
 }
