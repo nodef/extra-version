@@ -1,3 +1,7 @@
+export type compareFn<T>    = (a: T, b: T) => number;
+export type mapFn<T, U>     = (v: T, i: number, x: Iterable<T>) => U;
+export type nextFn<T>       = (v: T, s: T) => T;
+
 /**
  * Given a version number MAJOR.MINOR.PATCH, increment the:
  *
@@ -35,7 +39,7 @@ export interface IVersion {
    * API and how it changes.
    * @see https://semver.org
    */
-  major?: number,
+  major: number,
 
   /**
    * Minor version Y (x.Y.z | x > 0) MUST be incremented if new, backwards
@@ -47,7 +51,7 @@ export interface IVersion {
    * incremented.
    * @see https://semver.org
    */
-  minor?: number,
+  minor: number,
 
   /**
    * Patch version Z (x.y.Z | x > 0) MUST be incremented if only backwards
@@ -55,7 +59,7 @@ export interface IVersion {
    * change that fixes incorrect behavior.
    * @see https://semver.org
    */
-  patch?: number,
+  patch: number,
 
   /**
    * A pre-release version MAY be denoted by appending a hyphen and a series
@@ -69,7 +73,7 @@ export interface IVersion {
    * @example 1.0.0-alpha, 1.0.0-alpha.1, 1.0.0-0.3.7, 1.0.0-x.7.z.92.
    * @see https://semver.org
    */
-  prerelease?: string,
+  prerelease: string,
 
   /**
    * Build metadata MAY be denoted by appending a plus sign and a series of
@@ -81,5 +85,5 @@ export interface IVersion {
    * @example 1.0.0-alpha+001, 1.0.0+20130313144700, 1.0.0-beta+exp.sha.5114f85.
    * @see https://semver.org
    */
-  buildmetadata?: string
+  buildmetadata: string
 };

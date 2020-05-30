@@ -1,30 +1,27 @@
-import type {IVersion} from './_types';
+const REMPTY = /(^|\.)(\.|$)/g;
+const REXTRA = /(^|-\.)0+([1-9]+)/g;
+const RPREFIX = /.*?(\d)/;
+const RNOTPART = /[^\.0-9A-Za-z-]/g;
 
-const DEFAULT = {
-  major: 0,
-  minor: 0,
-  patch: 0,
-  prerelease: '',
-  buildmetadata: ''
-};
-const RVERSION = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
-
-
-// make this the default yo dawg, rrarf rrarf
-function fromObject(x: IVersion): IVersion {
-  return Object.assign({}, DEFAULT, x);
-}
-
-// shouldnt this be combined together too
-// what about a combined function
-function fromString(x: string): IVersion {
-  var [,m, n, o, prerelease, buildmetadata] = x.match(RVERSION);
-  var major = parseInt(m, 10);
-  var minor = parseInt(n, 10);
-  var patch = parseInt(o, 10);
-  return {major, minor, patch, prerelease, buildmetadata};
-}
-
-function from(s: string) {
+/**
+ * Converts version-like to version.
+ * @param x a version-like
+ * @param inc include empty prerelease, build (false)
+ */
+function from(x: string, inc: boolean=false): string {
+  var x = x.replace(REMPTY, '$10$2').replace(REMPTY, '$10$2');
+  var x = x.replace(REXTRA, '$1$2').replace(RPREFIX, '$1');
+  var i = x.indexOf('+'), bld = i<0? null : x.slice(i+1);
+  var j = x.indexOf('-'), pre = j<0? null : x.slice(j, i<0? x.length:i);
+  var bld = bld? bld.replace(RNOTPART, ''):bld;
+  var pre = pre? pre.replace(RNOTPART, ''):pre;
+  var xs = x.slice(0, j<0? x.length:j).split('.');
+  for(var i=0, I=Math.max(xs.length, 3); i<I; i++)
+    xs[i] = isNaN(xs[i] as any)? '0':xs[i];
+  var a = xs.slice(0, 3).join('.');
+  if(pre || inc && pre!=null) a += '-'+pre;
+  if(bld || inc && bld!=null) xs.push(bld);
+  if(xs.length>3) a += '+'+xs.slice(3).join('.');
+  return a;
 }
 export default from;
