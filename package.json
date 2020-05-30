@@ -1,0 +1,23 @@
+{
+  "name": "extra-version",
+  "version": "0.0.1",
+  "description": "A version is a set of numbers that identify a unique evolution of a system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/extra-version.git"
+  },
+  "keywords": [
+    "extra",
+    "version"
+  ],
+  "author": "wolfram77@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodef/extra-version/issues"
+  },
+  "homepage": "https://github.com/nodef/extra-version#readme"
+}
