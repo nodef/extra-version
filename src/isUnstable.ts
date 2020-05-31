@@ -1,8 +1,10 @@
+import Version from "./Version";
+
 /**
- * Check is version has a prerelease.
+ * Checks is version has a prerelease.
  * @param x a version
  */
-function isUnstable(x: string): boolean {
-  return x.includes('-');
+function isUnstable(x: Version): boolean {
+  return x.prerelease.length>0;
 }
 export default isUnstable;

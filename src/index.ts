@@ -1,4 +1,5 @@
 export {default as RVERSION} from './RVERSION';
+export {default as Version} from './Version';
 export {default as compare} from './compare';
 export {default as from} from './from';
 export {default as is} from './is';
