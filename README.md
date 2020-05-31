@@ -38,19 +38,19 @@ y.toString();
 
 | Method                | Action
 |-----------------------|-------
-| [is]                  | Exchanges two values.
-| [isUnstable]          | Gets zero-based index.
-| [from]                | Checks if value is array.
-| [parse]               | Gets value at index.
-| [stringify]           | Sets value at index.
-| [compare]             | Exchanges two values.
-| [isEqual]             | Gets zero-based index.
-| [next]                | Gets index range of part of array.
+| [is]                  | Checks if value is version.
+| [isUnstable]          | Checks if version is major 0, or pre-release.
+| [from]                | Converts value to version.
+| [parse]               | Converts string to version.
+| [stringify]           | Converts version to string.
+| [compare]             | Compares two versions. 
+| [isEqual]             | Checks if two versions are equal.
+| [next]                | Gives the next version.
 |                       | 
-| [MAJOR]               | Checks if two arrays are equal.
-| [MINOR]               | Checks if two arrays are equal.
-| [PATCH]               | Checks if two arrays are equal.
-| [RVERSION]            | Checks if two arrays are equal.
+| [MAJOR]               | Defines first major version. (1.0.0)
+| [MINOR]               | Defines first minor version. (0.1.0)
+| [PATCH]               | Defines first patch version. (0.0.1)
+| [RVERSION]            | Regular expression to check a semver string.
 
 <br>
 
@@ -64,3 +64,18 @@ y.toString();
 [:package:]: https://www.npmjs.com/package/extra-version
 [:moon:]: https://www.npmjs.com/package/extra-version.min
 [:ledger:]: https://unpkg.com/extra-version/
+[rollup]: https://github.com/nodef/extra-version/wiki/rollup
+[browserify]: https://github.com/nodef/extra-version/wiki/browserify
+[uglify-js]: https://github.com/nodef/extra-version/wiki/uglify-js
+[is]: https://github.com/nodef/extra-version/wiki/is
+[isUnstable]: https://github.com/nodef/extra-version/wiki/isUnstable
+[from]: https://github.com/nodef/extra-version/wiki/from
+[parse]: https://github.com/nodef/extra-version/wiki/parse
+[stringify]: https://github.com/nodef/extra-version/wiki/stringify
+[compare]: https://github.com/nodef/extra-version/wiki/compare
+[isEqual]: https://github.com/nodef/extra-version/wiki/isEqual
+[next]: https://github.com/nodef/extra-version/wiki/next
+[MAJOR]: https://github.com/nodef/extra-version/wiki/MAJOR
+[MINOR]: https://github.com/nodef/extra-version/wiki/MINOR
+[PATCH]: https://github.com/nodef/extra-version/wiki/PATCH
+[RVERSION]: https://github.com/nodef/extra-version/wiki/RVERSION
