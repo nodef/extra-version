@@ -38,13 +38,19 @@ y.toString();
 
 | Method                | Action
 |-----------------------|-------
-| [is]                  | Checks if value is array.
-| [get]                 | Gets value at index.
-| [set]                 | Sets value at index.
-| [swap]                | Exchanges two values.
-| [index]               | Gets zero-based index.
-| [indexRange]          | Gets index range of part of array.
-| [size]                | Gets size of part of array.
+| [is]                  | Exchanges two values.
+| [isUnstable]          | Gets zero-based index.
+| [from]                | Checks if value is array.
+| [parse]               | Gets value at index.
+| [stringify]           | Sets value at index.
+| [compare]             | Exchanges two values.
+| [isEqual]             | Gets zero-based index.
+| [next]                | Gets index range of part of array.
+|                       | 
+| [MAJOR]               | Checks if two arrays are equal.
+| [MINOR]               | Checks if two arrays are equal.
+| [PATCH]               | Checks if two arrays are equal.
+| [RVERSION]            | Checks if two arrays are equal.
 
 <br>
 
