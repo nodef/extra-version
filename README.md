@@ -13,7 +13,7 @@ scheme as far as possible.
 ```javascript
 const version = require('extra-version');
 // import * as version from 'extra-version';
-// import * as version from 'https://unpkg.com/extra-version@2.8.22/index.mjs'; (deno)
+// import * as version from 'https://unpkg.com/extra-version@1.0.0/index.mjs'; (deno)
 
 var x = version.from('v1.2.3.4');
 x.toString();
