@@ -12,7 +12,7 @@ function from(x: string, inc: boolean=false): string {
   var x = x.replace(REMPTY, '$10$2').replace(REMPTY, '$10$2');
   var x = x.replace(REXTRA, '$1$2').replace(RPREFIX, '$1');
   var i = x.indexOf('+'), bld = i<0? null : x.slice(i+1);
-  var j = x.indexOf('-'), pre = j<0? null : x.slice(j, i<0? x.length:i);
+  var j = x.indexOf('-'), pre = j<0? null : x.slice(j+1, i<0? x.length:i);
   var bld = bld? bld.replace(RNOTPART, ''):bld;
   var pre = pre? pre.replace(RNOTPART, ''):pre;
   var xs = x.slice(0, j<0? x.length:j).split('.');
