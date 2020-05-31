@@ -56,6 +56,10 @@ array.bsearch(x, 5);
 | [indexRange]          | Gets index range of part of array.
 | [size]                | Gets size of part of array.
 
+<br>
+
+[![nodef](https://merferry.glitch.me/card/extra-version.svg)](https://nodef.github.io)
+
 [semver]: https://www.npmjs.com/package/semver
 [SemVer spec]: https://semver.org
 [Isaac Schlueter]: https://izs.me
