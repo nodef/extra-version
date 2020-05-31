@@ -1,4 +1,4 @@
-A [version] is a set of numbers that identify a unique evolution of a system. [:running:] [:package:] [:moon:] [:ledger:]
+A [version] is a set of numbers that identify a unique evolution of a system. [:running:] [:vhs:] [:package:] [:moon:] [:ledger:]
 
 Methods as separate packages:
 - `@extra-version/next`: use [rollup] to bundle this es module.
@@ -83,3 +83,4 @@ y.toString();
 [MINOR]: https://github.com/nodef/extra-version/wiki/MINOR
 [PATCH]: https://github.com/nodef/extra-version/wiki/PATCH
 [RVERSION]: https://github.com/nodef/extra-version/wiki/RVERSION
+[:vhs:]: https://asciinema.org/a/335555
