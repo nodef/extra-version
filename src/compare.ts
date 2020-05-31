@@ -10,17 +10,17 @@ import type {compareFn, mapFn} from './_types';
  * @returns x<y: -ve, x=y: 0, x>y: +ve
  */
 function compare(x: Version, y: Version, fc: compareFn<string>=null, fm: mapFn<string, string>=null): number {
-  // version with prerelease is unstable, hence its lower
-  var XP = x.prerelease.length, YP = y.prerelease.length;
+  // pre-releases are unstable, hence lower
+  var xp = x.prerelease||[], XP = xp.length;
+  var yp = y.prerelease||[], YP = yp.length;
   if((XP>0)!==(YP>0)) return YP - XP;
-  // otherwise, compare except buildmetadata
+  // compare, except build metadata
   var c = x.major - y.major;
   if(c!==0) return c;
   var c = x.minor - y.minor;
   if(c!==0) return c;
   var c = x.patch - y.patch;
   if(c!==0) return c;
-  var c = arrayCompare(x.prerelease, y.prerelease, fc||cmp, fm);
-  return c;
+  return arrayCompare(xp, yp, fc||cmp, fm);
 }
 export default compare;

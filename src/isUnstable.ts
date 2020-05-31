@@ -1,10 +1,10 @@
 import Version from "./Version";
 
 /**
- * Checks is version has a prerelease.
+ * Checks if version is a pre-release.
  * @param x a version
  */
 function isUnstable(x: Version): boolean {
-  return x.prerelease.length>0;
+  return x.prerelease && x.prerelease.length>0;
 }
 export default isUnstable;

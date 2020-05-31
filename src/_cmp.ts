@@ -2,10 +2,10 @@
  * Compares two version parts.
  * @param a a version part
  * @param b another version part
- * @returns a<b: -1, a=b: 0, a>b: 1
+ * @returns a<b: -ve, a=b: 0, a>b: +ve
  */
-function cmp(x: string, y: string): number {
-  if(isNaN(x as any) || isNaN(y as any)) return x.localeCompare(y);
-  else return parseInt(x, 10) - parseInt(y, 10);
+function cmp(a: string, b: string): number {
+  if(isNaN(a as any) || isNaN(b as any)) return a.localeCompare(b);
+  else return parseInt(a, 10) - parseInt(b, 10);
 }
 export default cmp;
