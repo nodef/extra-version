@@ -7,3 +7,4 @@ export {default as isEqual} from './isEqual';
 export {default as isUnstable} from './isUnstable';
 export {default as next} from './next';
 export {default as parse} from './parse';
+export {default as stringify} from './stringify';
