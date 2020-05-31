@@ -11,37 +11,27 @@ scheme as far as possible.
 > Stability: Experimental.
 
 ```javascript
-const array = require('extra-array');
-// import * as array from 'extra-array';
-// import * as array from 'https://unpkg.com/extra-array@2.8.22/index.mjs'; (deno)
+const version = require('extra-version');
+// import * as version from 'extra-version';
+// import * as version from 'https://unpkg.com/extra-version@2.8.22/index.mjs'; (deno)
 
-var x = [1, 2, 3];
-array.get(x, -1);
-// 3
+var x = version.from('v1.2.3.4');
+x.toString();
+// '1.2.3+4'
 
-var x = [1, 2, 3, 4];
-array.swap(x, 0, 1);
-// [2, 1, 3, 4]
+var x = version.from('0.2');
+version.isUnstable(x);
+// true
 
-var x = [1, 2, 3, 4];
-array.rotate(x, 1);
-// [4, 1, 2, 3]
+var x = version.from('1.2');
+var y = version.from('1.2.3');
+version.compare(x, y);
+// -3
 
-var x = [1, 3, 5, 7];
-array.bsearch(x, 5);
-// 2           ^ found
-
-[...array.permutations([1, 2, 3])];
-// [
-//   [],          [ 1 ],
-//   [ 2 ],       [ 3 ],
-//   [ 1, 2 ],    [ 1, 3 ],
-//   [ 2, 1 ],    [ 2, 3 ],
-//   [ 3, 1 ],    [ 3, 2 ],
-//   [ 1, 2, 3 ], [ 1, 3, 2 ],
-//   [ 2, 1, 3 ], [ 2, 3, 1 ],
-//   [ 3, 1, 2 ], [ 3, 2, 1 ]
-// ]
+var x = version.from('1.2');
+var y = version.next(x, version.MINOR);
+y.toString();
+// '1.3.0'
 ```
 
 ### reference
