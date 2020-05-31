@@ -4,9 +4,9 @@ Methods as separate packages:
 - `@extra-version/next`: use [rollup] to bundle this es module.
 - `@extra-version/next.min`: use in browser ([browserify], [uglify-js]).
 
-Most of the ideas are from [semver] by [Isaac Schlueter], and [SemVer spec]
-by [Tom Preston]. You can notice that i have followed Javascript naming
-scheme as far as possible.
+Most of the ideas are from [Semantic versioning] by [Tom Preston], and
+[semver] by [Isaac Schlueter]. You can notice that i have followed
+Javascript naming scheme as far as possible.
 
 > Stability: Experimental.
 
@@ -61,7 +61,7 @@ y.toString();
 [rollup]: https://www.npmjs.com/package/rollup
 [uglify-js]: https://www.npmjs.com/package/uglify-js
 [semver]: https://www.npmjs.com/package/semver
-[SemVer spec]: https://semver.org
+[Semantic versioning]: https://semver.org
 [Isaac Schlueter]: https://izs.me
 [Tom Preston]: https://tom.preston-werner.com
 [:running:]: https://npm.runkit.com/extra-version
