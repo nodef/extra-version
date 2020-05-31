@@ -1,7 +1,7 @@
 import Version from "./Version";
 
 /**
- * Checks if version is a pre-release.
+ * Checks if version is major 0, or pre-release.
  * @param x a version
  */
 function isUnstable(x: Version): boolean {
