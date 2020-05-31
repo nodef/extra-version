@@ -1,6 +1,6 @@
 {
   "name": "extra-version",
-  "version": "0.0.26",
+  "version": "0.1.0",
   "description": "A version is a set of numbers that identify a unique evolution of a system.",
   "main": "index.js",
   "module": "index.mjs",
@@ -45,6 +45,6 @@
   "homepage": "https://github.com/nodef/extra-version#readme",
   "devDependencies": {
     "@extra-array/compare": "^2.8.41",
-    "extra-build": "^1.0.158"
+    "extra-build": "^1.0.161"
   }
 }
