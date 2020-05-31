@@ -56,7 +56,7 @@ y.toString();
 
 [![nodef](https://merferry.glitch.me/card/extra-version.svg)](https://nodef.github.io)
 
-[version]: https://www.npmjs.com/package/semver
+[version]: https://semver.org
 [browserify]: https://www.npmjs.com/package/browserify
 [rollup]: https://www.npmjs.com/package/rollup
 [uglify-js]: https://www.npmjs.com/package/uglify-js
