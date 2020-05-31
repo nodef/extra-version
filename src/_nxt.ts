@@ -1,7 +1,7 @@
 /**
  * Gives next version part.
  * @param v a version part
- * @param d version step part
+ * @param d step part
  */
 function nxt(v: string, d: string): string {
   var r = d.startsWith('.'), d = d.slice(r? 1:0);

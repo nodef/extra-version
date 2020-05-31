@@ -4,7 +4,10 @@ import arrayCompare from '@extra-array/compare';
 import type {compareFn, mapFn} from './_types';
 
 /**
- * Compares two versions.
+ * Compares two versions. 
+ * 
+ * Pre-releases are considered lower with respect to normal versions.
+ * Build metadata is non-unique and does not alter version ordering.
  * @param x a version
  * @param y another version
  * @returns x<y: -ve, x=y: 0, x>y: +ve

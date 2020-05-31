@@ -1,6 +1,6 @@
-export {default as NEXT_MAJOR} from './NEXT_MAJOR';
-export {default as NEXT_MINOR} from './NEXT_MINOR';
-export {default as NEXT_PATCH} from './NEXT_PATCH';
+export {default as MAJOR} from './MAJOR';
+export {default as MINOR} from './MINOR';
+export {default as PATCH} from './PATCH';
 export {default as RVERSION} from './RVERSION';
 export {default as Version} from './Version';
 export {default as compare} from './compare';

@@ -1,28 +1,32 @@
 import nxt from './_nxt';
 import Version from './Version';
-import NEXT_PATCH from './NEXT_PATCH';
+import PATCH from './PATCH';
 import type {nextFn} from './_types';
 
-function nextPart(vs: string[], ds: string[], fn: nextFn<string>): string[] {
+function nextPart(xs: string[], ss: string[], fn: nextFn<string>): string[] {
   var r = false, a = [];
-  for(var i=0, I=vs.length; i<I; i++) {
-    a[i] = fn(vs[i], (r? '.':'')+(ds[i]||''));
-    r = a[i]!==vs[i];
+  for(var i=0, I=xs.length; i<I; i++) {
+    a[i] = fn(xs[i], (r? '.':'')+(ss[i]||''));
+    r = a[i]!==xs[i];
   }
   return a;
 }
 
 /**
  * Gives the next version.
+ * 
+ * Version step is for updating major, minor, patch, prerelease, or buildmetadata.
+ * Next function is for controlling now each part of version is updated with step.
+ * If a version part "xv" is to be reset, step part "sv" begins with '.'.
  * @param x a version
  * @param s version step (0.0.1)
- * @param fn next function (v, d)
+ * @param fn next function (xv, sv)
  */
-function next(x: Version, s: Version=NEXT_PATCH, fn: nextFn<string>=null): Version {
+function next(x: Version, s: Version=PATCH, fn: nextFn<string>=null): Version {
   var fn = fn||nxt;
-  var vs = `${x.major}.${x.minor}.${x.patch}`.split('.');
-  var ds = `${s.major}.${s.minor}.${s.patch}`.split('.');
-  var [major, minor, patch] = nextPart(vs, ds, fn).map(parseInt);
+  var xs = `${x.major}.${x.minor}.${x.patch}`.split('.');
+  var ss = `${s.major}.${s.minor}.${s.patch}`.split('.');
+  var [major, minor, patch] = nextPart(xs, ss, fn).map(parseInt);
   var prerelease = s.prerelease? nextPart(x.prerelease||[], s.prerelease, fn) : null;
   var buildmetadata = s.buildmetadata? nextPart(x.buildmetadata||[], s.buildmetadata, fn) : null;
   return new Version(major, minor, patch, prerelease, buildmetadata);

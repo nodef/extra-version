@@ -4,6 +4,9 @@ import type {compareFn, mapFn} from './_types';
 
 /**
  * Checks if two versions are equal.
+ * 
+ * Pre-releases are considered lower with respect to normal versions.
+ * Build metadata is non-unique and does not alter version ordering.
  * @param x an version
  * @param y another version
  * @param fc compare function (a, b)

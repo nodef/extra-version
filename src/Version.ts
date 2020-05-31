@@ -1,3 +1,5 @@
+import stringify from './stringify';
+
 /**
  * Given a version number MAJOR.MINOR.PATCH, increment the:
  *
@@ -66,7 +68,7 @@ class Version {
   buildmetadata: string[];
   
   /**
-   * Defines a semantic version, semver.
+   * Defines a semantic version.
    * @param major major number (0)
    * @param minor minor number (0)
    * @param patch patch number (0)
@@ -80,5 +82,10 @@ class Version {
     this.prerelease = prerelease;
     this.buildmetadata = buildmetadata;
   }
+
+  /**
+   * Converts version to string.
+   */
+  toString() { return stringify(this); }
 }
 export default Version;
