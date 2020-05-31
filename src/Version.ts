@@ -14,3 +14,4 @@ class Version {
   }
 }
 // TODO: toString() -> stringify()
+export default Version;
