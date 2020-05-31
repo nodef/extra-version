@@ -1,11 +1,10 @@
-import RVERSION from './RVERSION';
+import Version from './Version';
 
 /**
  * Checks if value is version.
  * @param v value
  */
 function is(v: any): boolean {
-  if(typeof v!=='string') return false;
-  return RVERSION.test(v);
+  return v instanceof Version;
 }
 export default is;

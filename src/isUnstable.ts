@@ -5,6 +5,6 @@ import Version from "./Version";
  * @param x a version
  */
 function isUnstable(x: Version): boolean {
-  return x.prerelease && x.prerelease.length>0;
+  return x.major===0 || (x.prerelease && x.prerelease.length>0);
 }
 export default isUnstable;
