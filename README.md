@@ -1,4 +1,4 @@
-A version is a set of numbers that identify a unique evolution of a system. [:running:] [:package:] [:moon:] [:ledger:]
+A [version] is a set of numbers that identify a unique evolution of a system. [:running:] [:package:] [:moon:] [:ledger:]
 
 Methods as separate packages:
 - `@extra-version/next`: use [rollup] to bundle this es module.
@@ -56,6 +56,10 @@ y.toString();
 
 [![nodef](https://merferry.glitch.me/card/extra-version.svg)](https://nodef.github.io)
 
+[version]: https://www.npmjs.com/package/semver
+[browserify]: https://www.npmjs.com/package/browserify
+[rollup]: https://www.npmjs.com/package/rollup
+[uglify-js]: https://www.npmjs.com/package/uglify-js
 [semver]: https://www.npmjs.com/package/semver
 [SemVer spec]: https://semver.org
 [Isaac Schlueter]: https://izs.me
