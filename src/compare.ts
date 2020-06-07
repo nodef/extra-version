@@ -1,6 +1,6 @@
 import cmp from './_cmp';
 import Version from './Version';
-import arrayCompare from '@extra-array/compare';
+import {compare as arrayCompare} from 'extra-array';
 import type {compareFn, mapFn} from './_types';
 
 /**
