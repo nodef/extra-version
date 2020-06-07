@@ -5,8 +5,7 @@ Methods as separate packages:
 - `@extra-version/next.min`: use in browser ([browserify], [uglify-js]).
 
 Most of the ideas are from [Semantic versioning] by [Tom Preston], and
-[semver] by [Isaac Schlueter]. You can notice that i have followed
-Javascript naming scheme as far as possible.
+[semver] by [Isaac Schlueter].
 
 > Stability: Experimental.
 
