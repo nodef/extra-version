@@ -67,9 +67,6 @@ y.toString();
 [:package:]: https://www.npmjs.com/package/extra-version
 [:moon:]: https://www.npmjs.com/package/extra-version.min
 [:ledger:]: https://unpkg.com/extra-version/
-[rollup]: https://github.com/nodef/extra-version/wiki/rollup
-[browserify]: https://github.com/nodef/extra-version/wiki/browserify
-[uglify-js]: https://github.com/nodef/extra-version/wiki/uglify-js
 [is]: https://github.com/nodef/extra-version/wiki/is
 [isUnstable]: https://github.com/nodef/extra-version/wiki/isUnstable
 [from]: https://github.com/nodef/extra-version/wiki/from
