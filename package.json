@@ -1,6 +1,6 @@
 {
   "name": "extra-version",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A version is a set of numbers that identify a unique evolution of a system.",
   "main": "index.js",
   "module": "index.mjs",
@@ -23,19 +23,19 @@
   "keywords": [
     "extra",
     "version",
-    "MAJOR",
-    "MINOR",
-    "PATCH",
-    "RVERSION",
-    "Version",
     "compare",
     "from",
     "is",
     "isEqual",
     "isUnstable",
+    "MAJOR",
+    "MINOR",
     "next",
     "parse",
-    "stringify"
+    "PATCH",
+    "RVERSION",
+    "stringify",
+    "Version"
   ],
   "author": "wolfram77@gmail.com",
   "license": "MIT",
@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/nodef/extra-version#readme",
   "devDependencies": {
-    "extra-array": "^2.10.8",
-    "extra-build": "^1.1.27"
+    "extra-array": "^2.10.9",
+    "extra-build": "^1.1.28"
   }
 }
