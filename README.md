@@ -54,6 +54,7 @@ y.toString();
 <br>
 
 [![nodef](https://merferry.glitch.me/card/extra-version.svg)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/extra-version)
 
 [version]: https://semver.org
 [browserify]: https://www.npmjs.com/package/browserify
