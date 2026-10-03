@@ -2,28 +2,28 @@ A [version] is a set of numbers that identify a unique evolution of a system. Mo
 
 ▌
 📦 [JSR](https://jsr.io/@nodef/extra-version),
-📦 [NPM](https://www.npmjs.com/package/extra-version),
+📦 [NPM](https://www.npmjs.com/package/@nodef/extra-version),
 📰 [Docs](https://jsr.io/@nodef/extra-version/doc).
 
 
 ```javascript
-import {* as version} from 'jsr:@nodef/extra-version';
+import * as xversion from 'jsr:@nodef/extra-version';
 
-let x = version.from('v1.2.3.4');
+let x = xversion.from('v1.2.3.4');
 x.toString();
 // '1.2.3+4'
 
-let x = version.from('0.2');
-version.isUnstable(x);
+let x = xversion.from('0.2');
+xversion.isUnstable(x);
 // true
 
-let x = version.from('1.2');
-let y = version.from('1.2.3');
-version.compare(x, y);
+let x = xversion.from('1.2');
+let y = xversion.from('1.2.3');
+xversion.compare(x, y);
 // -3
 
-let x = version.from('1.2');
-let y = version.next(x, version.MINOR);
+let x = xversion.from('1.2');
+let y = xversion.next(x, xversion.MINOR);
 y.toString();
 // '1.3.0'
 ```
